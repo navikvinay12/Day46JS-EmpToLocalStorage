@@ -30,4 +30,56 @@
 {
     color: #42515f;
 }
-
+/* UC2-Creating a body for Form,adding Header label and 1st input as text for Name */
+.form-content
+{
+    min-height:calc(100%-80%);      /*no impact */
+    background-color: #f7f7f7;      /*no impact */
+    display: flex;                  /*mandatory to apply flex so than only justify-content will work */
+    justify-content: center;        /*to make it center */
+}
+.form
+{
+    width: 65%;                     /*by def width is v small ,so increasing width*/    
+    padding: 44px 60px;             /* gap between content and margin  */
+    background: #FFFFFF 0% 0% no-repeat padding-box;/* by def form and main background r same,so making diff on form b/g  */
+    border: 1px solid #f5f5f5;      /*  border margin (thickness of border) */
+    border-radius: 8px;             /* form border will be rounded from corner  */
+    box-shadow: 0px 3px 6px #00000029;      /*H V blurredness color (applying shadow)  */
+}/*   */
+.form-head
+{
+    font: normal normal bold 20px/37px Roboto;/*form-laid out with the given pixel and bold but no effect on removing normal*/
+    color: #42515f;     
+    text-transform: capitalize; /*pascal*/
+    padding-bottom: 20px;       /*gap in between margin and content*/
+}
+.row-content
+{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    border: 0px solid green;
+}
+.label
+{
+    min-width: 140px; /*width applying -here it lets all the placeholder to be started with the same starting position */
+}
+label       /*no effect*/
+{
+    padding:12px 12px 12px 0;
+    display: inline-block;
+}
+.text
+{
+    font-size: 16px;
+    color: #42515f;
+    font-family: Roboto;
+}
+.input
+{
+    width: 100%;        /*by def its v small ,we increasing the width from left to end of the right */
+    padding: 12px;  
+    border: 1px solid #ccc;   /*making lighter contrast of border */
+    border-radius: 4px;         /*corner curved on placeholder i.e textBox*/
+}
