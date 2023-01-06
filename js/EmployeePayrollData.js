@@ -18,7 +18,7 @@ class EmployeePayrollData
         let nameRegex=RegExp('^[A_Z]{1}[a-zA-Z]{2,}$')
         if(nameRegex.test(name))
             this._name=name;
-        else throw 'Improper Name Format!'
+        else throw 'Name is Incorrect!';
     }
     get profilePic()
     {
