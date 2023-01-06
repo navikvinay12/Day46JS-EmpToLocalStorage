@@ -75,7 +75,7 @@
             <div class="row-content">
                 <label class="label text" for="salary">Choose your salary: </label>
                 <input class="input" type="range" name="salary" id="salary" min="30000" max="50000" step="100" value="40000">
-                <output class="salary-output text" for="salary">40000</output>
+                <output class="salary-output text" for="salary">50000</output>
             </div>
             <div class="row-content">
                 <label class="label text" for="startDate">StartDate</label>
@@ -152,14 +152,6 @@
             </div>
         </form>
     </div>
-    <script>
-        const salary=document.querySelector('#salary');
-        const output=document.querySelector('.salary-output');
-        output.textContent=salary.value;
-        salary.addEventListener('input',function()
-        {
-            output.textContent=salary.value;
-        })
-    </script>
+    <script src="../js/EmployeeRegister.js"></script>
 </body>
 </html>
