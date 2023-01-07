@@ -105,4 +105,29 @@ function createAndUpdateStorage(employeePayrollData)
     alert(employeePayrollList.toString());
     localStorage.setItem("EmployeePayrollList",JSON.stringify(employeePayrollList))
 }
-
+// Day46 UC5 Reset the Employee Payroll Filled Form to default .
+const resetForm=()=>
+{
+    setValue('#name','');
+    unsetSelectedValues('[name=profile]');
+    unsetSelectedValues('[name=gender]');
+    unsetSelectedValues('[name=department]');
+    setValue('#salary','');
+    setValue('#note','');
+    setValue('#day','1');
+    setValue('#month','January');
+    setValue('#year','2023');
+}
+const unsetSelectedValues=(propertyValue)=>
+{
+    let allItems=document.querySelectorAll(propertyValue);
+    allItems.forEach(item=>
+        {
+            item.checked=false;
+        });
+}
+const setValue=(id,value)=>
+{
+    const element = document.querySelector(id);
+    element.value=value;
+}
