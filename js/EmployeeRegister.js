@@ -28,15 +28,14 @@ window.addEventListener('DOMContentLoaded',(event)=>
         output.textContent=salary.value;
     });
 });
-//Day46-UC3 - On clicking on Submit button ,it should save employee data .
+//Day46-UC3 - On clicking on Submit button ,dialog box should appear representing employee data .
 const save = () => 
 {
     try
     {
-        let employeePayrollData = createEmployeePayroll();
-        //createAndUpdateStorage(employeePayrollData);  //UC4
-        // alert("");
-        
+        let employeePayrollData = createEmployeePayroll();  //UC3 Getting all data from from into a single object .
+        createAndUpdateStorage(employeePayrollData);  //UC4 emp data Storing into cache
+        // alert("");       //In order to get normal alert without any msg ~ Suraj Sir.
     }catch(e)
     {
         console.log(e);
@@ -85,10 +84,11 @@ const getInputValueById=(id)=>
     let value=document.querySelector(id).value;
     return value;
 }
-// /*      //deprecated supportive for only older ver.
-const getInputElementValue=(id)=>
-{
-    let value= document.getElementById(id).value;
-    return value;
-}
-// */
+
+// const getInputElementValue=(id)=>
+// {
+//     let value= document.getElementById(id).value;
+//     return value;
+// }
+
+

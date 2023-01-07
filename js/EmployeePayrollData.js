@@ -3,7 +3,7 @@ class EmployeePayrollData
 {
     get id()
     {
-        return this.id
+        return this._id
     }
     set id(id)
     {
@@ -30,7 +30,7 @@ class EmployeePayrollData
     }
     get gender()
     {
-        return this.gender;
+        return this._gender;
     }
     set gender(gender)
     {
@@ -70,15 +70,10 @@ class EmployeePayrollData
     }
     toString()
     {
-        const option = { year: 'numeric', month: 'short', day: 'numeric' };
+        const option = { year: 'numeric', month: 'long', day: 'numeric' };
         const joiningDate = !this.startDate ? "undefined" :
         this.startDate.toLocaleDateString("en-GB", option);
-            return "Name: " + this.name +", Gender: " + this.gender  +", ProfilePic: "+ this.profilePic +
-             ", Department: " + this.department+ ", Salary: " + this.salary+", Start Date: " + this.startDate +", Note: "+this.note;
-             
-            //  const options = { year: 'numeric', month: 'short', day: 'numeric' };
-            //  const empDate = !this.startDate ? "undefined" : 
-            //                  this.startDate.toLocaleDateString("en-GB", options);
-            // "Id: " + this.id + 
+            return "Id: " + this.id +", Name: " + this.name +", Gender: " + this.gender  +", ProfilePic: "+ this.profilePic +
+             ", Department: " + this.department+ ", Salary: " + this.salary+", Start Date: " + joiningDate +", Note: "+this.note;
     }
 }
