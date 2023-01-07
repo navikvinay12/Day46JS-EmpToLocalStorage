@@ -84,11 +84,25 @@ const getInputValueById=(id)=>
     let value=document.querySelector(id).value;
     return value;
 }
-
 // const getInputElementValue=(id)=>
 // {
 //     let value= document.getElementById(id).value;
 //     return value;
 // }
 
+//Day46-UC4 Saving Employee Payroll form data to Local Storage cache.
+function createAndUpdateStorage(employeePayrollData)
+{
+    let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+    if(employeePayrollList != undefined)
+    {
+        employeePayrollList.push(employeePayrollData);
+    }
+    else
+    {
+        employeePayrollList=[employeePayrollData]
+    }
+    alert(employeePayrollList.toString());
+    localStorage.setItem("EmployeePayrollList",JSON.stringify(employeePayrollList))
+}
 
