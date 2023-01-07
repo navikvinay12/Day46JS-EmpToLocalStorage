@@ -161,3 +161,12 @@ select
     border: 1px solid #969696;
     background: #E2E2E2 0% 0% no-repeat padding-box;
 }
+
+/* Day46 -UC2 */
+.text-error
+{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
+}

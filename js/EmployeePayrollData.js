@@ -15,7 +15,7 @@ class EmployeePayrollData
     }
     set name(name)
     {
-        let nameRegex=RegExp('^[A_Z]{1}[a-zA-Z]{2,}$')
+        let nameRegex=RegExp('^[A-Z]{1}[a-zA-Z]{2,}$')
         if(nameRegex.test(name))
             this._name=name;
         else throw 'Name is Incorrect!';
@@ -70,10 +70,15 @@ class EmployeePayrollData
     }
     toString()
     {
-        const option = { year: "numeric", month: "long", day: "numeric" };
-        const joiningDate = this.startDate ? "undefined" :
+        const option = { year: 'numeric', month: 'short', day: 'numeric' };
+        const joiningDate = !this.startDate ? "undefined" :
         this.startDate.toLocaleDateString("en-GB", option);
-            return "Id: " + this.id + ", Name: " + this.name +", Gender: " + this.gender  +", ProfilePic: "+ this.profilePic +
-             ", Department: " + this.department+ ", Salary: " + this.salary+", Start Date: " + empDate +", Note: "+this.note;
+            return "Name: " + this.name +", Gender: " + this.gender  +", ProfilePic: "+ this.profilePic +
+             ", Department: " + this.department+ ", Salary: " + this.salary+", Start Date: " + this.startDate +", Note: "+this.note;
+             
+            //  const options = { year: 'numeric', month: 'short', day: 'numeric' };
+            //  const empDate = !this.startDate ? "undefined" : 
+            //                  this.startDate.toLocaleDateString("en-GB", options);
+            // "Id: " + this.id + 
     }
 }
